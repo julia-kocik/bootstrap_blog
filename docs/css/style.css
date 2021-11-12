@@ -1,5 +1,9 @@
 /* Variables */
 /* Global */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Quicksand", sans-serif;
 }
@@ -13,6 +17,7 @@ body {
 /* Carousel */
 .carousel-inner, .carousel-item {
   height: 800px;
+  position: relative;
 }
 
 .carousel-item img {
@@ -23,21 +28,26 @@ body {
 .carousel-caption {
   padding-top: 0;
   padding-bottom: 0;
-  right: auto;
-  left: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(156, 104, 104, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption h4 {
+  font-size: 144px;
+  font-family: "Cormorant", sans-serif;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.carousel-caption h3 {
-  font-size: 60px;
-  font-family: "Cormorant", sans-serif;
-}
-
-.carousel-caption h4 {
-  font-size: 36px;
-  font-family: "Cormorant", sans-serif;
+.carousel-control-prev, .carousel-control-next {
+  z-index: 10;
 }
 
 /* Sale */
