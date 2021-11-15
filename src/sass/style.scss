@@ -85,3 +85,10 @@ body {
 .footer .container .row {
     justify-content: space-between;
 }
+
+/* Media */
+@media (max-width: 767px) {
+    .carousel-caption h4 {
+        font-size: 72px;
+    }
+}
